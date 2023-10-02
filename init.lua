@@ -42,6 +42,8 @@ P.S. You can delete this when you're done too. It's your config now :)
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.wo.relativenumber = true
+
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -142,13 +144,10 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+  { "catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
+	config = function() vim.cmd.colorscheme 'catppuccin' end,
   },
 
   {
