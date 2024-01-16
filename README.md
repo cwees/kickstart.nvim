@@ -41,10 +41,8 @@ Clone kickstart.nvim:
 
 - on Linux and Mac
 ```sh
-
-# on Linux and Mac
 git clone git@github.com:cwees/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-
+```
 - on Windows (cmd)
 ```
 git clone https://github.com/cwees/kickstart.nvim.git %userprofile%\AppData\Local\nvim\ 
