@@ -309,12 +309,6 @@ require('lazy').setup({
     },
   },
 
-  { "catppuccin/nvim",
-	name = "catppuccin",
-	priority = 1000,
-	config = function() vim.cmd.colorscheme 'catppuccin' end,
-  },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -921,11 +915,9 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      -- require('tokyonight').setup {
-      --   styles = {
-      --     comments = { italic = false }, -- Disable italics in comments
-      --   },
-      -- }
+    require("catppuccin").setup({
+    auto_integrations = true,
+    })
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
